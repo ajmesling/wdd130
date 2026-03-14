@@ -16,11 +16,40 @@ h1 {
 img {
     width: 150px;
     height: auto;
-    border: 1px sold black;
+    border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
 
 p {
-    padding: 10px;
+    padding: 0;
+}
+
+main {
+    max-width: 840px;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+}
+
+aside {
+    width: 300px;
+    margin: 20px;
+    border: 2px solid #333;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #270101;
+    text-align: center;
 }
