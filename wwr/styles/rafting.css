@@ -146,7 +146,6 @@ p {
     line-height: 1.6;
 }
 
-/* Section styling - consolidated and fixed */
 section {
     background-color: white;
     border: 1px solid #e0e0e0;
@@ -172,19 +171,14 @@ section p {
     margin-bottom: 0;
 }
 
-/* History section - no additional styling needed */
-
-/* Adventure Awaits section - fixed conflicts */
 section:last-of-type {
     background-color: white;
     min-height: 200px;
     display: block;
-    /* Changed from grid to block */
 }
 
 section:last-of-type h2 {
     grid-column: auto;
-    /* Removed grid property */
     border-bottom: 2px solid var(--accent1-color);
 }
 
