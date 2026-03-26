@@ -4,19 +4,36 @@
     box-sizing: border-box;
 }
 
-nav {
-    background-color: darkblue;
-    padding: 10px;
+header,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
 }
 
+/* Navigation - Flexbox for horizontal layout */
+nav {
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Navigation links styling */
 nav a {
-    color: white;
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
 }
 
 h1 {
     color: darkblue;
+    border-bottom: 2px solid steelblue;
+    /* ADDED: bottom border */
+    padding-bottom: 0.5rem;
 }
 
 img {
@@ -32,7 +49,7 @@ p {
 }
 
 main {
-    max-width: 840px;
+    /* max-width: 840px; - REMOVED */
 }
 
 main img {
@@ -45,9 +62,14 @@ main img {
 }
 
 aside {
-    width: 300px;
+    width: 20rem;
+    /* CHANGED: from 300px to 20rem */
     text-align: center;
     position: relative;
+    grid-column: 1/2;
+    /* ADDED: for grid positioning */
+    grid-row: 1/2;
+    /* ADDED: for grid positioning */
 }
 
 aside img {
@@ -79,4 +101,26 @@ footer {
     padding: 1rem;
     background-color: #f5f0e6;
     color: #2c3e50;
+}
+
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    /* Aside: 20rem, Main: remaining space */
+    gap: 1rem;
+    align-items: start;
+}
+
+/* Main positioning in grid */
+main {
+    grid-column: 2/3;
+    margin: 1rem;
 }
