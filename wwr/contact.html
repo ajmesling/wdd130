@@ -56,35 +56,37 @@
 
                     <fieldset class="purpose-group">
                         <legend>Message Purpose:</legend>
-                        <label class="radio-label">
-                            <input type="radio" name="purpose" value="General Inquiry" required>
-                            General
-                            Inquiry
+                        <label class="radio-label" for="purpose-general">
+                            <input type="radio" id="purpose-general" name="purpose"
+                              value="General Inquiry" required>
+                            General Inquiry
                         </label>
-                        <label class="radio-label">
-                            <input type="radio" name="purpose" value="Reservation Question">
-                            Reservation
-                            Question
+                        <label class="radio-label" for="purpose-reservation">
+                            <input type="radio" id="purpose-reservation" name="purpose"
+                              value="Reservation Question">
+                            Reservation Question
                         </label>
-                        <label class="radio-label">
-                            <input type="radio" name="purpose" value="Website Suggestion"> Website
-                            Suggestion
+                        <label class="radio-label" for="purpose-suggestion">
+                            <input type="radio" id="purpose-suggestion" name="purpose"
+                              value="Website Suggestion">
+                            Website Suggestion
                         </label>
                     </fieldset>
+
                     <label for="message">Message Type Here:</label>
                     <textarea id="message" name="message" rows="5"
                       placeholder="Please share your questions, feedback, or suggestions..."
                       required></textarea>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="newsletter" value="subscribe"> Please Subscribe
-                        me
-                        to the monthly newsletter
+
+                    <label class="checkbox-label" for="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                        Please Subscribe me to the monthly newsletter
                     </label>
+
                     <button type="submit" class="submit-btn">Get in Touch!</button>
                 </form>
             </div>
         </div>
-
         <section class="employee-profiles">
             <h2>Meet Our Expert Team</h2>
             <div class="profiles-grid">
