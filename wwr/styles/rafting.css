@@ -18,6 +18,7 @@ body {
     color: #1a3e60;
 }
 
+/* Layout containers */
 header,
 main,
 footer {
@@ -39,36 +40,13 @@ header img {
     max-width: 150px;
 }
 
-.flex-nav {
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-end;
-}
-
-.flex-nav a {
-    color: var(--accent2-color);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.flex-nav a:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    border-radius: 4px;
-}
-
+/* Navigation */
 nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
 }
 
 nav a {
@@ -85,22 +63,22 @@ nav a:hover {
     border-radius: 4px;
 }
 
+/* Typography */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-nav,
-p,
-section,
-article {
-    margin: 0;
-    padding: 0;
-}
-
 p {
     margin-bottom: 1rem;
+}
+
+/* Social Media */
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .socialmedia a {
@@ -112,12 +90,7 @@ p {
     height: 24px;
 }
 
-.socialmedia {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
+/* Hero Section */
 .hero {
     position: relative;
 }
@@ -138,8 +111,6 @@ p {
     opacity: 0.7;
     background-color: var(--accent1-color);
     color: #1a3e60;
-    border-radius: 0;
-    white-space: normal;
     font-size: 2rem;
 }
 
@@ -162,7 +133,6 @@ p {
     margin-bottom: 10px;
     border: 3px solid var(--primary-color);
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero article p {
@@ -171,7 +141,13 @@ p {
     line-height: 1.6;
 }
 
-section {
+/* Card styles - one rule for all card-like sections */
+section,
+.history-section,
+.adventure-section,
+.company-info,
+.contact-form,
+.employee-profiles {
     background-color: white;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -180,38 +156,28 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+/* Heading styles - one rule for all h2 inside cards */
+section h2,
+.history-section h2,
+.adventure-section h2,
+.company-info h2,
+.contact-form h2,
+.employee-profiles h2 {
     color: var(--primary-color);
     margin-top: 0;
     margin-bottom: 1.5rem;
     font-size: 2rem;
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 0.75rem;
+    font-family: var(--heading-font);
 }
 
-section p {
+/* Paragraph styles inside cards */
+section p,
+.history-content p {
     color: #333;
     line-height: 1.8;
     font-size: 1.1rem;
-    margin-bottom: 0;
-}
-
-.history-section {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.history-section h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.75rem;
 }
 
 .history-content {
@@ -221,30 +187,10 @@ section p {
 }
 
 .history-content p {
-    color: #333;
-    line-height: 1.8;
-    font-size: 1.1rem;
     margin: 0;
 }
 
-.adventure-section {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.adventure-section h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.75rem;
-}
-
+/* Adventure Grid */
 .adventure-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -262,7 +208,6 @@ section p {
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -277,7 +222,7 @@ section p {
     font-size: 0.9rem;
 }
 
-/* CONTACT US PAGE SPECIFIC STYLES */
+/* Contact Page Layout */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -296,26 +241,7 @@ section p {
     border: 0;
 }
 
-.company-info,
-.contact-form {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.company-info h2,
-.contact-form h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.75rem;
-    font-family: var(--heading-font);
-}
-
+/* Company Details */
 .company-details h3 {
     color: var(--primary-color);
     font-family: var(--heading-font);
@@ -339,6 +265,7 @@ section p {
     text-decoration: underline;
 }
 
+/* Google Map */
 .map-container {
     margin-top: 1.5rem;
     border-radius: 8px;
@@ -353,6 +280,7 @@ section p {
     border: 0;
 }
 
+/* Form Styles - Consolidated */
 .contact-form form {
     display: flex;
     flex-direction: column;
@@ -374,7 +302,6 @@ section p {
     border-radius: 6px;
     font-family: var(--body-font);
     font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form input[type="text"]:focus,
@@ -385,6 +312,7 @@ section p {
     box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.2);
 }
 
+/* Form field groups */
 .purpose-group {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -399,35 +327,31 @@ section p {
     font-family: var(--heading-font);
 }
 
-.radio-label {
+/* Radio and Checkbox */
+.radio-label,
+.checkbox-label {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-right: 1.5rem;
     font-weight: normal;
     cursor: pointer;
 }
 
-.radio-label input[type="radio"] {
-    width: auto;
-    margin: 0;
-    cursor: pointer;
+.radio-label {
+    margin-right: 1.5rem;
 }
 
 .checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: normal;
-    cursor: pointer;
     margin: 0.5rem 0;
 }
 
+.radio-label input[type="radio"],
 .checkbox-label input[type="checkbox"] {
     width: auto;
     cursor: pointer;
 }
 
+/* Submit Button */
 .submit-btn {
     background-color: var(--primary-color);
     color: white;
@@ -437,43 +361,17 @@ section p {
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 0.5rem;
-    font-family: var(--body-font);
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.submit-btn:active {
-    transform: translateY(0);
-}
-
-.employee-profiles {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.employee-profiles h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.75rem;
-    font-family: var(--heading-font);
-}
-
+/* Employee Profiles Grid */
 .profiles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -500,7 +398,6 @@ section p {
     height: 250px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #f0f0f0;
 }
 
@@ -516,6 +413,7 @@ section p {
     font-size: 1.1rem;
 }
 
+/* Footer */
 footer {
     display: flex;
     justify-content: space-between;
@@ -532,17 +430,19 @@ footer p {
     color: var(--accent2-color);
 }
 
-/* RESPONSIVE DESIGN  */
+/* RESPONSIVE DESIGN */
+
+/* Tablet and smaller */
 @media (max-width: 880px) {
 
     header,
     main,
     footer {
         width: 95%;
-        margin: 0 auto;
     }
 }
 
+/* Mobile landscape and tablet */
 @media (max-width: 768px) {
     header {
         grid-template-columns: 1fr;
@@ -550,56 +450,32 @@ footer p {
         gap: 1rem;
     }
 
-    .flex-nav {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     nav ul {
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .contact-container {
+    .contact-container,
+    .adventure-grid,
+    .profiles-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
     .adventure-grid {
-        grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .adventure-grid img {
+    .profiles-grid {
+        gap: 1.5rem;
+    }
+
+    .adventure-grid img,
+    .profiles-grid img {
         height: auto;
         max-height: 250px;
     }
 
-    .profiles-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .profiles-grid img {
-        height: auto;
-        max-height: 300px;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .map-container iframe {
-        height: 250px;
-    }
-
-    .radio-label {
-        display: flex;
-        margin-bottom: 0.5rem;
-    }
-
+    /* Hero article */
     .hero article {
         position: relative;
         bottom: auto;
@@ -607,15 +483,36 @@ footer p {
         right: auto;
         margin-top: 1rem;
     }
+
+    /* Map height adjustment */
+    .map-container iframe {
+        height: 250px;
+    }
+
+    /* Radio buttons stack */
+    .radio-label {
+        display: flex;
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+
+    /* Footer stacks */
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
 }
 
+/* Mobile portrait */
 @media (max-width: 480px) {
 
     .company-info,
     .contact-form,
     .employee-profiles,
     .history-section,
-    .adventure-section {
+    .adventure-section,
+    section {
         padding: 1.25rem;
     }
 
@@ -623,7 +520,8 @@ footer p {
     .contact-form h2,
     .employee-profiles h2,
     .history-section h2,
-    .adventure-section h2 {
+    .adventure-section h2,
+    section h2 {
         font-size: 1.5rem;
     }
 
