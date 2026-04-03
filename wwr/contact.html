@@ -14,11 +14,13 @@
 <body>
     <header class="grid-header">
         <img src="images/z-raftingcompas.jpg" alt="Rafting site logo">
-        <nav class="flex-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -50,6 +52,7 @@
                 <form action="#" method="post">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Your full name" required>
+
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="you@example.com"
                       required>
@@ -78,8 +81,8 @@
                       placeholder="Please share your questions, feedback, or suggestions..."
                       required></textarea>
 
-                    <label class="checkbox-label" for="newsletter">
-                        <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                    <label class="checkbox-label" for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
                         Please Subscribe me to the monthly newsletter
                     </label>
 
@@ -87,27 +90,25 @@
                 </form>
             </div>
         </div>
+
         <section class="employee-profiles">
             <h2>Meet Our Expert Team</h2>
             <div class="profiles-grid">
                 <figure>
                     <img src="images/employee1.jpg" alt="Lead Rafting Guide Vaughn Sanders">
                     <figcaption><strong>Vaughn Sanders</strong><br>Lead Rafting Guide & Safety
-                        Coordinator
-                    </figcaption>
+                        Coordinator</figcaption>
                 </figure>
                 <figure>
                     <img src="images/employee2.jpg" alt="Trip Director - Kaya Esling">
                     <figcaption><strong>Kaya Esling</strong><br>Second Generation Owner & Trip
-                        Director
-                    </figcaption>
+                        Director</figcaption>
                 </figure>
                 <figure>
                     <img src="images/employee3.jpg"
                       alt="River Logistics Manager - Amarjeet Rajeesh">
                     <figcaption><strong>Amarjeet Rajeesh</strong><br>River Logistics & Expedition
-                        Manager
-                    </figcaption>
+                        Manager</figcaption>
                 </figure>
             </div>
         </section>
